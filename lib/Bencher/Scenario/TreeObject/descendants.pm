@@ -18,9 +18,8 @@ our $scenario = {
         map {
             my $spec = $classes->{$_};
             +{
-                (module => $_) x !!($spec->{load} // 1),
-                name => do { my $name = $_; $name =~ s/^My:://; $name },
-                code_template => "state \$tree = Tree::Create::Size::create_tree(height => <height>, num_children => <num_children>, class => '$_'); my \@res = \$tree->descendants; scalar(\@res)",
+                module => $_,
+                code_template => "state \$tree = Tree::Create::Size::create_tree(height => <height>, num_children => <num_children>, class => '".($spec->{use_my_class} ? "My::$_":$_)."'); my \@res = \$tree->descendants; scalar(\@res)",
             }
         } sort keys %$classes,
     ],

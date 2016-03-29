@@ -8,9 +8,9 @@ our %classes = (
     'Tree::Object::Hash::ChildrenAsList' => {backend=>'hash'},
     'Tree::ObjectXS::Hash'               => {backend=>'hash'},
 
-    'My::Tree::Object::Array'            => {backend=>'array', load=>0},
-    'My::Tree::Object::Array::Glob'      => {backend=>'array', load=>0},
-    'My::Tree::ObjectXS::Array'          => {backend=>'array', load=>0},
+    'Tree::Object::Array'                => {backend=>'array', use_my_class=>1},
+    'Tree::Object::Array::Glob'          => {backend=>'array', use_my_class=>1},
+    'Tree::ObjectXS::Array'              => {backend=>'array', use_my_class=>1},
 );
 
 package # hide from PAUSE
