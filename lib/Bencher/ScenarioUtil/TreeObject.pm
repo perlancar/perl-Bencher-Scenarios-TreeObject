@@ -15,6 +15,11 @@ our %classes = (
 
 our @trees_datasets = (
     {
+        name => 'tiny1 (3 nodes)',
+        summary => 'A tree with height=1 and 2 children per non-leaf nodes, nodes=1 + 2 = 3',
+        args => {height=>1, num_children=>2},
+    },
+    {
         name => 'small1 (31 nodes)',
         summary => 'A tree with height=4 and 2 children per non-leaf nodes, nodes=1 + 2 + 4 + 8 + 16 = 31',
         args => {height=>4, num_children=>2},
