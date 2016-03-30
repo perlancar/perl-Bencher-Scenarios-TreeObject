@@ -1,5 +1,12 @@
 Revision history for Bench-Scenarios-TreeObject
 
+0.03    2016-03-31 (PERLANCAR)
+
+	- Add tree dataset: tiny1 (3 nodes).
+
+	- Fix dataset, small1 was 63 nodes instead of 31.
+
+
 0.02    2016-03-30 (PERLANCAR)
 
 	- Add scenario: TreeObject::Build.
