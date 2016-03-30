@@ -1,4 +1,4 @@
-package Bencher::Scenario::TreeObject::descendants;
+package Bencher::Scenario::TreeObject::Build;
 
 # DATE
 # VERSION
@@ -13,13 +13,14 @@ use Tree::Create::Size;
 my $classes = \%Bencher::ScenarioUtil::TreeObject::classes;
 
 our $scenario = {
-    summary => 'Benchmark descendants()',
+    summary => 'Benchmark tree building using Tree::Create::Size',
+    include_result_size => 1,
     participants => [
         map {
             my $spec = $classes->{$_};
             +{
                 module => $_,
-                code_template => "state \$tree = Tree::Create::Size::create_tree(height => <height>, num_children => <num_children>, class => '".($spec->{use_my_class} ? "My::$_":$_)."'); my \@res = \$tree->descendants; scalar(\@res)",
+                code_template => "Tree::Create::Size::create_tree(height => <height>, num_children => <num_children>, class => '".($spec->{use_my_class} ? "My::$_":$_)."')",
             }
         } sort keys %$classes,
     ],
