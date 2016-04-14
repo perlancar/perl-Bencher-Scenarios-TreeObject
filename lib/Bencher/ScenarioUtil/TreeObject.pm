@@ -11,6 +11,8 @@ our %classes = (
     'Tree::Object::Array'                => {backend=>'array', use_my_class=>1},
     'Tree::Object::Array::Glob'          => {backend=>'array', use_my_class=>1},
     'Tree::ObjectXS::Array'              => {backend=>'array', use_my_class=>1},
+
+    'Tree::Object::InsideOut'            => {backend=>'insideout'},
 );
 
 our @trees_datasets = (
