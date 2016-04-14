@@ -1,5 +1,10 @@
 Revision history for Bench-Scenarios-TreeObject
 
+0.04    2016-04-14 (PERLANCAR)
+
+	- Benchmark Tree::Object::InsideOut.
+
+
 0.03    2016-03-31 (PERLANCAR)
 
 	- Add tree dataset: tiny1 (3 nodes).
