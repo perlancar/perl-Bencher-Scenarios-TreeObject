@@ -2,3 +2,4 @@ Bencher-Scenarios-TreeObject-*
 .build
 *~
 nytprof*
+.DS_Store
